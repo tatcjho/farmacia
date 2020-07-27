@@ -10,11 +10,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
+  },
+  {
     path: 'jose',
     loadChildren: () => import('./jose/jose.module').then( m => m.JosePageModule)
   },
-<<<<<<< HEAD
   {
     path: 'crear-medicamento',
     loadChildren: () => import('./TatianaCardenas/page/crear-medicamento/crear-medicamento.module').then( m => m.CrearMedicamentoPageModule)
@@ -22,10 +22,8 @@ const routes: Routes = [
 
   
 ];
-=======
->>>>>>> dde4b81e664df4e5b6a0842134c3aac3a1c98908
 
-];
+
 
 @NgModule({
   imports: [
