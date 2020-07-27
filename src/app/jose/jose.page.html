@@ -1,9 +1,28 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>jose</ion-title>
+    <ion-title>Jose Calle Page</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <ion-list>
+    <ion-item *ngFor="let consulta of consultas | async">
+
+      <ion-label>
+
+        <h2>ID de Consulta: {{consulta.id}}</h2>
+      
+        <h2>Estado: {{consulta.estado}}</h2>
+        
+        <h2>Paciente: {{consulta.usuario.nombre}} {{consulta.usuario.apellido}}</h2>
+    
+        <h2>Medico: {{consulta.medico.nombre}} {{consulta.medico.apellido}}</h2>
+
+        <h2>Especialidad: {{consulta.medico.especialidad}} </h2>
+        
+        <h2>Fecha: {{consulta.fecha}}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

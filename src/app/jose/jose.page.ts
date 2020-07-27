@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { consulta } from '../jose/models/consulta';
+import { ConsultaService } from './services/consulta.service';
 
 @Component({
   selector: 'app-jose',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JosePage implements OnInit {
 
-  constructor() { }
+  consultas: Observable<consulta[]>;
+
+  constructor(private consultaService: ConsultaService) { }
 
   ngOnInit() {
+
+    this.consultas = this.consultaService.getConsulta()
+
+    
   }
 
 }
