@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear Medicamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list lines="full" class="ion-no-margin ion-no-padding">
+
+    <ion-item>
+      <ion-label position="stacked">Nombre</ion-label>
+      <ion-textarea [(ngModel)]="medicamento.nombre"></ion-textarea>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="stacked" >Concentracion</ion-label>
+      <ion-input [(ngModel)]="medicamento.concentracion"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div class="ion-padding">
+    <ion-button expand="block" type="submit" (click)="guardar()">Guardar</ion-button>
+  </div>
+
+</ion-content>

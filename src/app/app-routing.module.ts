@@ -11,6 +11,12 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'crear-medicamento',
+    loadChildren: () => import('./TatianaCardenas/page/crear-medicamento/crear-medicamento.module').then( m => m.CrearMedicamentoPageModule)
+  },
+
+  
 ];
 
 @NgModule({
