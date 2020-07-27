@@ -21,7 +21,9 @@ export class CrearMedicamentoPage implements OnInit {
     this.medicamentoService.sendMedicamento(this.medicamento).subscribe(data =>{
       console.log(data);
       if(data.code = '1')
-        this.toast("GUardado satisfactorio");
+        this.toast("Guardado satisfactorio");
+      else(data.code =! '1')
+        this.toast("No se pudo guardar");
     });
   }
 
