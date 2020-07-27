@@ -10,12 +10,20 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
+  },
+  {
     path: 'jose',
     loadChildren: () => import('./jose/jose.module').then( m => m.JosePageModule)
   },
+  {
+    path: 'crear-medicamento',
+    loadChildren: () => import('./TatianaCardenas/page/crear-medicamento/crear-medicamento.module').then( m => m.CrearMedicamentoPageModule)
+  },
 
+  
 ];
+
+
 
 @NgModule({
   imports: [
