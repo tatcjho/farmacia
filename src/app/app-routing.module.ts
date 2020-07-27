@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'crear-medicamento',
     loadChildren: () => import('./TatianaCardenas/page/crear-medicamento/crear-medicamento.module').then( m => m.CrearMedicamentoPageModule)
+  },  {
+    path: 'roles',
+    loadChildren: () => import('./Paulo/roles/roles.module').then( m => m.RolesPageModule)
   },
+
 
   
 ];
